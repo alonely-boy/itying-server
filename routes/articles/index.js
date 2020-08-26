@@ -21,8 +21,9 @@ module.exports = app => {
       if(result1){
         continue
       }else{
-        const result2 = await model.findOne({'content':{$regex:i}})
-        if(!result2){
+        const result2 = await model.findOne({'content':{$regex:i}})          
+        const result3 = await model.findOne({'icon':{$regex:i}})          
+        if(!result2&&!result3){
           fs.unlinkSync(path.resolve(__dirname + `../../../uploads/${i}`))
           count++;
         }
@@ -382,7 +383,7 @@ module.exports = app => {
       assert(false,422,'不准删除站长文章!')
     }
     const id = needToken(app, req.headers.authorization)
-    await model.findOneAndRemove(req.params.id)
+    await model.findOneAndRemove({_id:req.params.id})
     await modelUser.updateMany({}, {
       $pull: { article: req.params.id, agreed: req.params.id, stars: req.params.id }
     })
