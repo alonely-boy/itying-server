@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
     }
   },
   stars:[{type:mongoose.Schema.Types.ObjectId}],
-  avatar:{type:String,default:"http://81.70.59.91:3000/uploads/file-1596917732295"},
+  avatar:{type:String,default:"http://127.0.0.1:3000/uploads/file-1596917732295"},
   article:[{type:mongoose.Schema.Types.ObjectId}],
   agreed:[{type:mongoose.Schema.Types.ObjectId}]
 })

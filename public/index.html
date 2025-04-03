@@ -1,1 +1,184 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1,minimum-scale=1"><link rel=icon href=/favicon.ico><title>大学IT营</title><link href=/css/chunk-00eb6d49.9a8abfc5.css rel=prefetch><link href=/css/chunk-03d65a15.9a8abfc5.css rel=prefetch><link href=/css/chunk-0bd0a37a.bbdaffb8.css rel=prefetch><link href=/css/chunk-35b8c3e1.06057efe.css rel=prefetch><link href=/css/chunk-4eb87278.cf3cabcd.css rel=prefetch><link href=/css/chunk-5b324700.9a8abfc5.css rel=prefetch><link href=/css/chunk-5f99aedf.448cd1bb.css rel=prefetch><link href=/css/chunk-6b35f94f.9a8abfc5.css rel=prefetch><link href=/css/chunk-7e291fc0.4d88cba4.css rel=prefetch><link href=/css/chunk-95214fde.9a8abfc5.css rel=prefetch><link href=/css/chunk-a71420b2.3287d1a8.css rel=prefetch><link href=/css/chunk-decca60e.9a8abfc5.css rel=prefetch><link href=/css/login.cf05d4d6.css rel=prefetch><link href=/css/wrie.7eeb73df.css rel=prefetch><link href=/js/chunk-00eb6d49.b30fe65a.js rel=prefetch><link href=/js/chunk-03d65a15.c624affd.js rel=prefetch><link href=/js/chunk-0bd0a37a.f84c8f5e.js rel=prefetch><link href=/js/chunk-35b8c3e1.35c2b97b.js rel=prefetch><link href=/js/chunk-4eb87278.45137904.js rel=prefetch><link href=/js/chunk-5b324700.94397fec.js rel=prefetch><link href=/js/chunk-5f99aedf.89d049bb.js rel=prefetch><link href=/js/chunk-633c60aa.11406f5c.js rel=prefetch><link href=/js/chunk-6b35f94f.b8914e0d.js rel=prefetch><link href=/js/chunk-7e291fc0.39a84bf5.js rel=prefetch><link href=/js/chunk-95214fde.04e174e5.js rel=prefetch><link href=/js/chunk-a71420b2.a7afba0b.js rel=prefetch><link href=/js/chunk-decca60e.ae7b5e19.js rel=prefetch><link href=/js/login.c5b99bda.js rel=prefetch><link href=/js/wrie.8f29013a.js rel=prefetch><link href=/css/app.f0b1404c.css rel=preload as=style><link href=/css/chunk-vendors.2ac5db4b.css rel=preload as=style><link href=/js/app.03e4e06f.js rel=preload as=script><link href=/js/chunk-vendors.93948d09.js rel=preload as=script><link href=/css/chunk-vendors.2ac5db4b.css rel=stylesheet><link href=/css/app.f0b1404c.css rel=stylesheet></head><body><noscript><strong>We're sorry but web doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.93948d09.js></script><script src=/js/app.03e4e06f.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=icon href=/favicon.ico><title></title><style>html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    .chromeframe {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+    }
+
+    #loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FFF;
+      -webkit-animation: spin 2s linear infinite;
+      -ms-animation: spin 2s linear infinite;
+      -moz-animation: spin 2s linear infinite;
+      -o-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      z-index: 1001;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FFF;
+      -webkit-animation: spin 3s linear infinite;
+      -moz-animation: spin 3s linear infinite;
+      -o-animation: spin 3s linear infinite;
+      -ms-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FFF;
+      -moz-animation: spin 1.5s linear infinite;
+      -o-animation: spin 1.5s linear infinite;
+      -ms-animation: spin 1.5s linear infinite;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+
+    #loader-wrapper .loader-section {
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background: #7171C6;
+      z-index: 1000;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    #loader-wrapper .loader-section.section-left {
+      left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+      right: 0;
+    }
+
+
+    .loaded #loader-wrapper .loader-section.section-left {
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+      transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader {
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    .loaded #loader-wrapper {
+      visibility: hidden;
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: all 0.3s 1s ease-out;
+      transition: all 0.3s 1s ease-out;
+    }
+
+    .no-js #loader-wrapper {
+      display: none;
+    }
+
+    .no-js h1 {
+      color: #222222;
+    }
+
+    #loader-wrapper .load_title {
+      font-family: 'Open Sans';
+      color: #FFF;
+      font-size: 19px;
+      width: 100%;
+      text-align: center;
+      z-index: 9999999999999;
+      position: absolute;
+      top: 60%;
+      opacity: 1;
+      line-height: 30px;
+    }
+
+    #loader-wrapper .load_title span {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 13px;
+      color: #FFF;
+      opacity: 0.5;
+    }</style><link href=/css/chunk-0b7eadfc.d7904a80.css rel=prefetch><link href=/css/chunk-2876326b.d7904a80.css rel=prefetch><link href=/css/chunk-32adfa38.d7904a80.css rel=prefetch><link href=/css/chunk-43096f79.e1964db9.css rel=prefetch><link href=/css/chunk-4c2d4f38.9d12eee1.css rel=prefetch><link href=/css/chunk-556a36ec.5899a69c.css rel=prefetch><link href=/css/chunk-56fac334.d7904a80.css rel=prefetch><link href=/css/chunk-59e5b000.d7904a80.css rel=prefetch><link href=/css/chunk-60e6f868.885d7817.css rel=prefetch><link href=/css/chunk-7a43cf88.a14a7ec3.css rel=prefetch><link href=/css/chunk-7d75618c.d7904a80.css rel=prefetch><link href=/css/chunk-a024cf8a.1e7fdcaa.css rel=prefetch><link href=/css/login.9215bb4c.css rel=prefetch><link href=/css/wrie.7325ab02.css rel=prefetch><link href=/js/chunk-0b7eadfc.bc2c27ba.js rel=prefetch><link href=/js/chunk-1d66e3dd.a5e88aa6.js rel=prefetch><link href=/js/chunk-2876326b.882750ab.js rel=prefetch><link href=/js/chunk-32adfa38.bd100e27.js rel=prefetch><link href=/js/chunk-43096f79.02aaf12f.js rel=prefetch><link href=/js/chunk-4c2d4f38.14faf207.js rel=prefetch><link href=/js/chunk-556a36ec.99ef50ba.js rel=prefetch><link href=/js/chunk-56fac334.29e6d69f.js rel=prefetch><link href=/js/chunk-59e5b000.891c059b.js rel=prefetch><link href=/js/chunk-60e6f868.c758c367.js rel=prefetch><link href=/js/chunk-7a43cf88.2de95971.js rel=prefetch><link href=/js/chunk-7d75618c.ea5fe0d2.js rel=prefetch><link href=/js/chunk-a024cf8a.db2211d9.js rel=prefetch><link href=/js/login.1abf5de4.js rel=prefetch><link href=/js/wrie.6ee7b1a0.js rel=prefetch><link href=/css/app.48f9c892.css rel=preload as=style><link href=/css/chunk-vendors.6b92dc4c.css rel=preload as=style><link href=/js/app.1f86f9e4.js rel=preload as=script><link href=/js/chunk-vendors.cd00fa53.js rel=preload as=script><link href=/css/chunk-vendors.6b92dc4c.css rel=stylesheet><link href=/css/app.48f9c892.css rel=stylesheet></head><body><div id=app><div id=loader-wrapper><div id=loader></div><div class="loader-section section-left"></div><div class="loader-section section-right"></div><div class=load_title>正在加载系统资源，请耐心等待</div></div></div><script src=/js/chunk-vendors.cd00fa53.js></script><script src=/js/app.1f86f9e4.js></script></body></html>

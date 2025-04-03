@@ -105,16 +105,16 @@ module.exports = app =>{
   //广告
   router.get('/ad',async(req,res)=>{
     // await modelad.create({
-    //   img:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2311510311,3909449138&fm=26&gp=0.jpg",
-    //   link:"https://cn.vuejs.org/"
+    //   img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSC4x7lzFYr2ajI86yp72x1XquGfu9nkWRQ&s",
+    //   link:"https://www.opera.com/"
     // })
     // await modelad.create({
-    //   img:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1402639174,3545935100&fm=26&gp=0.jpg",
-    //   link:"http://nodejs.cn/"
+    //   img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrbYksoUJUnqlaPR2BsCFRbwhkAJD6XlMVQ&s",
+    //   link:"https://www.opera.com/"
     // })
     // await modelad.create({
-    //   img:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2915449934,3377305849&fm=26&gp=0.jpg",
-    //   link:"https://www.mongodb.org.cn/"
+    //   img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJRRs0Oz2L4CKk9gDRZ6KZngcBTQAs88gkPQ&s",
+    //   link:"https://www.opera.com/"
     // })
     const result = await modelad.find({})
     res.send(result)
